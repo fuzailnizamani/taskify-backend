@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: "https://taskify-frontend-cyan.vercel.app",
+  origin: "https://fuzail-task-manager.vercel.app/",
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
 };
