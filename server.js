@@ -13,13 +13,20 @@ const cors = require('cors');
 
 connectDB();
 
-app.use(cors({ origin: "https://taskify-backend-9p6b.onrender.com", credentials: true }));
-
 // cookie parser middleware
 app.use(cookieParser());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+const corsOptions = {
+  origin: "https://taskify-frontend-cyan.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 
 // Routes
 app.use('/signup', signupRoute);
