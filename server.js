@@ -13,7 +13,7 @@ const cors = require('cors');
 
 connectDB();
 
-app.use(cors({ origin: "https://your-frontend-domain.com", credentials: true }));
+app.use(cors({ origin: "https://taskify-backend-9p6b.onrender.com", credentials: true }));
 
 // cookie parser middleware
 app.use(cookieParser());
